@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Cards</title>
+    <style>
+       body{
+    background-image: url(" https://img.freepik.com/free-vector/abstract-metallic-dark-blue-background_52683-17915.jpg");
+    background-repeat: no-repeat;
+    background-position: fixed;
+    background-size:cover;
+}
+
+        .card-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .card {
+            background-color: #6169dd;
+            border: 1px solid #787ed9;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.2s ease;
+            cursor: pointer;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .card-header {
+            background-color: #051c71;
+            color: #fff;
+            padding: 20px;
+            font-size: 18px;
+            text-align: center;
+        }
+
+        .card-content {
+            padding: 20px;
+            display: none;
+        }
+
+        .card-content p {
+            margin: 0;
+            font-size: 16px;
+        }
+
+        .card.active .card-content {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+<div class="card-container">
+    <div class="card">
+        <div class="card-header">The Movie Card</div>
+        <div class="card-content">
+            <p>This is a movie card please watch your favourite movie with someone.</p>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-header">The Magic card</div>
+        <div class="card-content">
+            <p>This is the magic card you can perfrom speels like Harry potter or maybe more</p>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-header">The Winning card</div>
+        <div class="card-content">
+            <p>This is the card which will help you win any thing(ps...dont use it to cheat).</p>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-header">The friendly card</div>
+        <div class="card-content">
+            <p>This is the friendly card this card would help you gain trust in your friends.</p>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-header">The Power card</div>
+        <div class="card-content">
+            <p>This is the power card which will help you win any compedition related toughness.</p>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-header">The Happy card</div>
+        <div class="card-content">
+            <p>This is the card which helps you to keep yourself and people amongst you happy.</p>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-header">The Animal card</div>
+        <div class="card-content">
+            <p>This is the animal card which will help you to listen as well talk to them .</p>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-header">Card 8</div>
+        <div class="card-content">
+            <p>This is the detailed content of Card 8.</p>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-header">Card 9</div>
+        <div class="card-content">
+            <p>This is the detailed content of Card 9.</p>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-header">Card 10</div>
+        <div class="card-content">
+            <p>This is the detailed content of Card 10.</p>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-header">Card 11</div>
+        <div class="card-content">
+            <p>This is the detailed content of Card 11.</p>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-header">Card 12</div>
+        <div class="card-content">
+            <p>This is the detailed content of Card 12.</p>
+        </div>
+    </div>
+</div>
+
+<script>
+    document.querySelectorAll('.card').forEach(card => {
+        card.addEventListener('click', () => {
+            card.classList.toggle('active');
+        });
+    });
+</script>
+
+</body>
+</html>
